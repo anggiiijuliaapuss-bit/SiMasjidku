@@ -37,3 +37,21 @@ label{display:block;margin:10px 0;font-size:.9rem;color:var(--mut)}label>*{margi
 .narrow{max-width:520px}
 #receipt{border:2px solid var(--pri);border-radius:8px;padding:16px}
 @media print{body *{visibility:hidden}#receipt,#receipt *{visibility:visible}#receipt{position:absolute;left:0;top:0;width:100%;color:#000;border-color:#000}}
+/* ---- Halaman login ---- */
+body.auth{min-height:100vh;display:flex;flex-direction:column;
+  background:
+    linear-gradient(180deg,rgba(29,107,82,.12) 0%,rgba(29,107,82,0) 45%,rgba(183,137,58,.10) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%231d6b52' stroke-opacity='.10' stroke-width='1.2'%3E%3Crect x='18' y='18' width='44' height='44'/%3E%3Crect x='18' y='18' width='44' height='44' transform='rotate(45 40 40)'/%3E%3C/g%3E%3Cg fill='%23b7893a' fill-opacity='.14'%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(0 0)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(80 0)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(0 80)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(80 80)'/%3E%3C/g%3E%3C/svg%3E"),
+    var(--bg);}
+@media (prefers-color-scheme:dark){body.auth{background:
+    linear-gradient(180deg,rgba(79,185,149,.10) 0%,rgba(79,185,149,0) 45%,rgba(217,176,95,.07) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%234fb995' stroke-opacity='.09' stroke-width='1.2'%3E%3Crect x='18' y='18' width='44' height='44'/%3E%3Crect x='18' y='18' width='44' height='44' transform='rotate(45 40 40)'/%3E%3C/g%3E%3Cg fill='%23d9b05f' fill-opacity='.12'%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(0 0)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(80 0)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(0 80)'/%3E%3Cpath d='M0 -3 3 0 0 3 -3 0Z' transform='translate(80 80)'/%3E%3C/g%3E%3C/svg%3E"),
+    var(--bg);}}
+body.auth main{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:24px 16px}
+.login-card{width:100%;max-width:400px;margin:0;padding:24px 24px 28px;border-top:4px solid var(--gold);box-shadow:0 10px 30px rgba(15,40,28,.12)}
+.login-card .brand{background:#fff;border-radius:10px;padding:8px;margin:0 auto 14px;text-align:center}
+.login-card .brand img{display:block;margin:0 auto;width:100%;max-width:260px;height:auto}
+.login-card h1{font-size:1.25rem;text-align:center;margin:0 0 2px}
+.login-card .mut{text-align:center;margin:0 0 8px}
+.login-card form{text-align:left}
+.auth-foot{text-align:center;padding:14px;font-size:.8rem;color:var(--mut)}

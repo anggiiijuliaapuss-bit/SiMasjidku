@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masuk – SIMasjidKu</title>
+    <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body>
+<body class="auth">
 <main>
-    <div class="lg card">
-        <div class="logo">🕌</div>
-        <h1>SIMasjidKu</h1>
-        <p class="mut">Sistem Informasi Manajemen Masjid</p>
+    <div class="card login-card">
+        <div class="brand">
+            <img src="{{ asset('img/logo.png') }}" alt="SIMasjidKu – Sistem Informasi Manajemen Masjid/Musala Berbasis Web">
+        </div>
+        <h1>Masuk ke sistem</h1>
+        <p class="mut sm">Silakan masuk dengan akun admin atau bendahara.</p>
         <form method="POST" action="{{ route('login.proses') }}">
             @csrf
             <label>Username
@@ -31,5 +34,6 @@
         </form>
     </div>
 </main>
+<footer class="auth-foot">Proyek Perangkat Lunak (Capstone Project) · STMIK El Rahma Yogyakarta</footer>
 </body>
 </html>
